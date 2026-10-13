@@ -59,9 +59,11 @@ verified, so a half-finished release never moves the `:latest` tag.
 
 ## Digest pinning
 
-`pin-digests.yml` runs on every published release and uploads
+The release workflow uploads
 `image-digests.txt` — one line per image, `ghcr.io/bittersecurity/<image>:<version>@sha256:<digest>` —
-as a release asset. Operators who want immutable, tamper-evident deploys pin
+as a release asset before publishing. This also covers releases published with
+`GITHUB_TOKEN`, which do not trigger a second release-event workflow.
+Operators who want immutable, tamper-evident deploys pin
 their compose stack to the digest form instead of the moving `:stable` /
 `:latest` channel tags:
 

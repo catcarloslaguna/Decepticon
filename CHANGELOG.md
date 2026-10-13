@@ -12,16 +12,20 @@ comparison link. Keep proposed and unmerged changes out of released sections.
 
 ## [Unreleased]
 
+## [1.4.1] — 2026-10-13
+
 ### Fixed
 
 - Complete planning-document schema guidance, detect model/table drift, and
   report all invalid documents in one validation attempt.
   ([#929](https://github.com/BitterSecurity/Decepticon/pull/929))
 - Transfer SARIF imports and reports through the run sandbox with trusted graph
-  and workspace scope, preserving protected files.
+  and workspace scope, preserving protected files, MCP-started workspaces,
+  and registered SARIF adapter overrides.
   ([#936](https://github.com/BitterSecurity/Decepticon/pull/936))
 - Attach the image digest manifest before publishing a release; GitHub Actions
   does not start a second workflow from a release published with `GITHUB_TOKEN`.
+  ([#938](https://github.com/BitterSecurity/Decepticon/pull/938))
 - Restore injected runtime handling for OPPLAN task dispatch and finding-quality
   checks. ([#923](https://github.com/BitterSecurity/Decepticon/pull/923))
 - Give LangGraph access to the engagement workspace for planning validation and
@@ -1027,7 +1031,8 @@ The following legacy import paths keep working but emit a
   atomic release.
 - Downstream plugin package lockstep migration.
 
-[Unreleased]: https://github.com/BitterSecurity/Decepticon/compare/v1.4.0...HEAD
+[Unreleased]: https://github.com/BitterSecurity/Decepticon/compare/v1.4.1...HEAD
+[1.4.1]: https://github.com/BitterSecurity/Decepticon/compare/v1.4.0...v1.4.1
 [1.4.0]: https://github.com/BitterSecurity/Decepticon/compare/v1.3.1...v1.4.0
 [1.3.1]: https://github.com/BitterSecurity/Decepticon/compare/v1.3.0...v1.3.1
 [1.3.0]: https://github.com/BitterSecurity/Decepticon/compare/v1.2.5...v1.3.0
